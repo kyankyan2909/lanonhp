@@ -1,0 +1,202 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  /*html===========================================*/
+ul,li{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+html {
+  font: 100%/1.5 sans-serif;
+  font-family: serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+body{
+  background-color:#fff;
+ 
+  background-size:cover;
+  margin:0;
+  min-height: 1vh;
+  
+}
+ /*header=========================================*/
+
+ header{
+  width:100vw;
+  height:70px;
+  background-color:#fff;
+  opacity:0.7;
+  position:relative;
+  z-index:1;
+  margin-bottom:0;
+ 
+  background-size:cover;
+}
+.header-logo{
+  float:left;
+  color:#000;
+  font-size:30px;
+  line-height:64px;
+  padding-left:10px;
+ padding-top:2px;
+}
+.header-menus{
+  float:right;
+  padding-right:20px;
+  position:relative;
+  padding-top:10px;
+}
+.header-menus li{
+  padding-left:15px;
+  float:left;
+  list-style:none;
+}
+a{
+  color:#cc99ff;
+  text-decoration:none;
+  font-size:30px;
+
+}
+.header-menus a{
+  font-size:20px;
+  padding-right:15px;
+}
+
+
+/*バーガーメニュー＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
+@media(max-width:767px){
+  
+  .nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,0.9);
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    visibility:hidden;
+    opacity:0;
+    transition:0.5s ease-in-out;
+    
+  }
+  .nav ul{
+    list-style:none;
+  
+  }
+  .nav li:not(:last-child){
+    margin-bottom:30px;
+  }
+  .nav a{
+    color:#fff;
+    display:flex;
+    font-size:25px;
+  }
+}
+#navbtn{
+  position:fixed;
+  top:20px;
+  right:15px;
+  padding:0;
+  outline:none;
+  border:none;
+  background:none;
+  width:30px;
+  height:20px;
+  cursor:pointer;
+}
+
+#navbtn::before,
+#navbtn::after{
+  content:'';
+  display:block;
+  height:2px;
+  background-color:#000;
+  transform:translateY(10px);
+  transition:0.3s ease-in-out;
+}
+#navbtn::before{
+  transform:translateY(-10px);
+  box-shadow:0 10px #000;
+}
+.open #navbtn{
+  z-index:100;
+}
+.open #navbtn::before{
+  transform:rotate(-45deg);
+  background-color:#fff;
+  box-shadow:none;
+  }
+  .open #navbtn::after{
+    transform:rotate(45deg);
+    background-color:#fff;
+    box-shadow:none;
+  }
+.open .nav{
+  visibility:visible;
+  opacity:0.8;
+ 
+}
+
+@media(min-width:768px){
+
+  header{
+    display:flex;
+    align-items:center;
+   
+  }
+  .nav{
+    margin-left:auto;
+  }
+  .nav ul{
+    display:flex;
+    list-style:none;
+  }
+  .nav ul li:not(:first-child){
+    margin-left:20px;
+  }
+    #navbtn{
+    display:none;
+  }
+}
+/*footer============================*/
+.footer{
+  height:40px;
+  width:100%;
+  background:#cc99ff;
+
+ }
+ .footer h3{
+   padding-top:5px;
+   text-align:center;
+   font-size:15px;
+   color:#fff;
+ }
+ .footer p{
+   color:#fff;
+   padding-left:2px;
+   
+ }
+ .footer p:hover{
+   color: #1DA1F2;
+ }
+

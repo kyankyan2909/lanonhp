@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RenonHp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
+     
+  </head>
+
+  <body>
+    <header>
+    
+     <nav class="nav">
+       <ul class="header-menus"id="header-menus">
+         <a href="#"><li><%=link_to("top","/")%></li></a>
+         <a href="#"><li><%= link_to("profile","/home/profile")%></li></a>
+          <a href="#"><li><%= link_to("works","/home/works")%></li></a>
+       </ul> 
+     </nav>
+     <button type="button" id="navbtn" ></button>
+      <%= javascript_pack_tag 'click' %>
+    </header>
+      <ul class="follow-me">
+        
+      </ul>
+     <%= yield %>
+    <footer>
+    <div class="footer">
+     <h3>Copyright©2021 Lanon</h3>
+    </div>
+    </footer>
+   
+  </body>
+</html>
