@@ -81,7 +81,7 @@ a{
 
 
 /*バーガーメニュー＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝*/
-@media screen and (max-width:767px){
+@medi(maax-width:767px){
   
   .nav{
     position:fixed;
